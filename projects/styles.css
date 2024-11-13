@@ -160,12 +160,12 @@ nav.no-transition {
 #name {
     font-size: 14px;
     font-weight: 500;
-    color: var(--text);
+    color: var(--super-dull-text);
 }
 
 #year {
     font-size: 12px;
-    color: var(--dull-text);
+    color: var(--super-duper-dull-text);
 }
 
 .PageButton {
