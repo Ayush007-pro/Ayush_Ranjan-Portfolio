@@ -1,0 +1,390 @@
+:root {
+    --text: rgb(249, 249, 249);
+    --dull-text: rgb(200, 200, 200);
+    --super-dull-text: rgb(150, 150, 150);
+    --text-gradient: linear-gradient(to right, rgb(249, 249, 249), rgb(80, 80, 80));
+    --inactive: rgb(80, 80, 80);
+    --medium-dull: rgb(130, 130, 130);
+    --dull: rgb(40, 40, 40);
+    --negativeText: rgb(8, 8, 8);
+    --imageText: rgb(254, 254, 254);
+    --grayedText: rgb(180, 180, 180);
+    --card: rgb(23, 23, 23); 
+    --acent-diluted: rgb(78, 78, 78);
+    --acent: rgb(254, 254, 254);
+    --shadow-color: rgba(100, 100, 100, 0.2);
+    --capsule-bg: rgb(250, 250, 250);
+    --capsule-button: rgb(100, 100, 100);
+    --buttonactive: rgb(100, 100, 100);
+    --buttonactive-2: rgb(220, 220, 220);
+    --news-button: rgb(254, 254, 254);
+    --TimelineBorder: rgb(254, 254, 254);
+    --body: rgb(8, 8, 8);
+    --card-2: rgb(23, 23, 23);
+    --underline: rgb(97, 97, 97);
+    --tab: rgb(254, 254, 254);
+    --tab-2: rgb(146, 175, 242);
+    --super-duper-dull-text: rgb(100, 100, 100);
+
+
+}
+
+::selection {
+    background-color: rgb(50, 50, 50);
+    color: rgb(250, 250, 250);
+}
+
+html {
+    background-image: linear-gradient(to right bottom, rgb(0, 0, 0), rgb(24, 27, 32), rgb(0, 0, 0));
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    width: 100vw;
+    /* height: 100vh; */
+    overflow: scroll;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+}
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: var(--inactive);
+  font-size: 30px;
+}
+
+#menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color ease-in 0.1s;
+}
+
+.menuIcon {
+    font-size: 30px;
+    color: var(--text);
+    transition: color ease-in 0.2s;
+}
+
+.inactiveIcon {
+    color: var(--inactive);
+}
+
+#menu:hover, #menu:hover .menuIcon {
+    cursor: pointer;
+    color: var(--text);
+}
+
+#menu:hover {
+    background-color: var(--dull);
+}
+
+
+
+#nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+    padding-left: 30px;
+    padding-bottom: 10px;
+    margin: 0;
+    margin-top: 20px;
+    width: 15vw;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    background-color: rgba(20, 20, 20, 0.8);
+    transform: translateX(-100%);
+    transition: transform ease-in 0.2s;
+}
+
+
+nav.no-transition {
+    transition: none;
+}
+
+
+#nav a {
+    text-decoration: none;
+}
+
+.sexy {
+    transform: translateX(0) !important;
+}
+
+
+#me {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 60px;
+    border-radius: 4px;
+}
+
+.profilePhoto {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: var(--inactive);
+}
+
+#meInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 5px;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+
+#name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text);
+}
+
+#year {
+    font-size: 12px;
+    color: var(--dull-text);
+}
+
+.PageButton {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 65%;
+    height: 35px;
+    border-radius: 4px;
+    color: var(--inactive);
+    margin-left: 5px;
+}
+
+.PageButton p {
+    color: inherit;
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 25px;
+}
+
+.navIcon {
+    font-size: 25px;
+    color: inherit;
+    font-variation-settings: 'wght' 250;
+}
+
+.activePageButton {
+    color: var(--text);
+}
+
+
+
+#main {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    top: 35vh;
+    transform: translateY(-50%);
+    left: 50vw;
+    transform: translateX(-50%);
+}
+
+#main h1, #main h2, #main h3, #main h4, #main h5, #main h6, #main p {
+    background: var(--text-gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#main h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.Emoji{
+    color: initial;
+    -webkit-text-fill-color: initial; /* Ensures the emoji color is not transparent */
+    animation: none; /* Default state without animation */
+    transition: transform 0.2s ease-in-out; /* Smooth transition */
+}
+
+.Emoji:hover {
+    animation: shaky-rotation 1.5s ease-in-out; /* Animation over 1.5 seconds */
+}
+
+@keyframes shaky-rotation {
+    0% { transform: rotate(0deg); }
+    5% { transform: rotate(15deg); }
+    10% { transform: rotate(10deg); }
+    15% { transform: rotate(-10deg); }
+    20% { transform: rotate(5deg); }
+    25% { transform: rotate(-5deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(10deg); }
+    50% { transform: rotate(-8deg); }
+    60% { transform: rotate(5deg); }
+    70% { transform: rotate(-3deg); }
+    80% { transform: rotate(2deg); }
+    90% { transform: rotate(-1deg); }
+    100% { transform: rotate(0deg); }
+}
+
+#main h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    margin: 15px 0 60px 0;
+}
+
+
+.inline-highlight {
+    padding: 10px;
+    background-color: rgb(15, 47, 81);
+    color: rgb(4, 150, 255);
+    display: inline-block; /* Ensures the background applies correctly */
+    -webkit-text-fill-color: rgb(4, 150, 255); /* Overrides parent transparency */
+    border-radius: 10px;
+}
+
+
+#socials {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space between icon and text */
+    text-decoration: none;
+    background-color: rgb(14, 19, 19); /* Dark background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px 20px; /* Spacing inside the button */
+    transition: background-color 0.3s;
+    width: 100px; /* Adjust the button width */
+    height: 20px; /* Adjust the button height */
+  }
+  
+#socials a:hover {
+background-color: rgb(20, 22, 25); /* Slightly lighter on hover */
+}
+
+#socials img {
+width: 20px; /* Adjust the icon size */
+height: 20px;
+}
+
+.socialIcon2 {
+    font-size: 25px; /* Adjust the icon size */
+    color: rgb(16, 71, 199);
+}
+
+#socials h3 {
+color: rgb(16, 71, 199); /* Blue text color */
+font-size: 16px; /* Adjust text size */
+font-weight: 400; /* Adjust text weight */
+margin: 0;
+background: none;
+background-clip: unset;
+-webkit-background-clip: unset;
+-webkit-text-fill-color: currentColor; /* Use current text color */
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+    margin-top: -15vh; /* TOP MARGIN ADJUSTER*/
+    margin-left: 50vw;
+    transform: translateX(-50%);
+    padding-bottom: 15vh;
+
+}
+
+.card {
+    width: 40vw;
+    padding: 16px 24px;
+    background-color: rgba(12, 14, 16, 0.75);
+    border: 1px solid rgb(40, 45, 52);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-text {
+    width: 75%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.card-text h1 {
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text);
+}
+
+.card-text p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--super-duper-dull-text);
+}
+
+
+.card a {
+    text-decoration: none;
+    width: 32px;
+    height: 32px;
+    color: var(--super-duper-dull-text);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(40, 45, 52);
+    border-radius: 6px;
+    transition: background-color 0.1s ease-in, color 0.1s ease-in;
+}
+
+.card a:hover {
+    color: var(--text);
+    background-color: var(--dull);
+}
